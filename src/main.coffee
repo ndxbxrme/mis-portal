@@ -10,7 +10,7 @@ portalUrl = 'http://misportal-test.backofficesupportservices.co.uk' if process.a
 mainWindow = null
 ready = ->
   autoUpdater.checkForUpdatesAndNotify()
-  BrowserWindow.addDevToolsExtension 'C:\\Users\\lewis\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\ighdmehidhipcmcojjgiloacoafjmpfk\\0.10.9_0'
+  #BrowserWindow.addDevToolsExtension 'C:\\Users\\lewis\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\ighdmehidhipcmcojjgiloacoafjmpfk\\0.10.9_0'
   mainWindow = new BrowserWindow
     width: 1280
     height: 720
