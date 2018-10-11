@@ -12,20 +12,24 @@
     portalUrl = 'http://localhost:3000';
   }
 
-  portalUrl = 'http://misportal-test.backofficesupportservices.co.uk';
+  if (process.argv.includes('test')) {
+    portalUrl = 'http://misportal-test.backofficesupportservices.co.uk';
+  }
 
   mainWindow = null;
 
   ready = function() {
     autoUpdater.checkForUpdatesAndNotify();
+    BrowserWindow.addDevToolsExtension('C:\\Users\\lewis\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\ighdmehidhipcmcojjgiloacoafjmpfk\\0.10.9_0');
     mainWindow = new BrowserWindow({
-      width: 800,
-      height: 600
+      width: 1280,
+      height: 720
     });
     mainWindow.on('closed', function() {
       return mainWindow = null;
     });
-    return mainWindow.loadURL(portalUrl);
+    mainWindow.loadURL(portalUrl);
+    return mainWindow.openDevTools();
   };
 
   app.on('ready', ready);
