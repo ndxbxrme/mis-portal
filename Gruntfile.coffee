@@ -36,7 +36,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: 'files'
-          dest: 'build'
+          dest: 'app'
           src: [
             '**/*.*'
           ]
